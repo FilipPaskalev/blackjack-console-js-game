@@ -10,7 +10,6 @@ const gameSettings = {
 // Generate a deck of cards
 function generateDeck(suits, ranks, numberOfDecks) {
   var deck = [];
-
   for (var i = 0; i < numberOfDecks; i++) {
     for (var suit of suits) {
       for (var rank of ranks) {
@@ -18,16 +17,8 @@ function generateDeck(suits, ranks, numberOfDecks) {
       }
     }
   }
-
   return deck;
 }
-
-// Generate deck with all card
-var deck = generateDeck(
-  gameSettings.suits,
-  gameSettings.ranks,
-  gameSettings.numberOfDecks
-);
 
 function shuffleDeck(deck) {
   var shuffledDeck = [...deck];
@@ -40,5 +31,12 @@ function shuffleDeck(deck) {
   return shuffledDeck;
 }
 
-var shuffledDeck = shuffleDeck(deck);
-console.log("🚀 ~ file: script.js:45 ~ shuffledDeck:", shuffledDeck);
+// Generate deck with all card and shuffle it
+var deck = shuffleDeck(
+  generateDeck(
+    gameSettings.suits,
+    gameSettings.ranks,
+    gameSettings.numberOfDecks
+  )
+);
+console.log("🚀 ~ file: script.js:42 ~ deck:", deck);
