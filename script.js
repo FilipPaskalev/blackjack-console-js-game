@@ -1,11 +1,11 @@
 const gameSettings = {
   // Suits
   suits: ["♣", "♦", "♥", "♠"],
-  // Generate a deck of cards
+  // face of cards
   ranks: ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"],
-  // Number of decks needed for game MAX-8
+  // MAX numbers of decks that can be add
   maxDecks: 8,
-  // Number of decks needed for game MIN-1
+  // MIN numbers of decks that can be add (default)
   minDecks: 1,
 };
 
