@@ -5,11 +5,7 @@ const utils = {
   maxNumberOfPlayers: 7, // Maximum number of players, default is 1
 };
 
-const engine = {
-  numberOfPlayers: setPlayers(players[0]), // default is 1 player
-};
-
-const players = [
+var players = [
   { name: "Player 1", hands: [], score: { wins: 0, losses: 0 } },
   { name: "Player 2", hands: [], score: { wins: 0, losses: 0 } },
   { name: "Player 3", hands: [], score: { wins: 0, losses: 0 } },
@@ -19,8 +15,20 @@ const players = [
   { name: "Player 7", hands: [], score: { wins: 0, losses: 0 } },
 ];
 
+const engine = {
+  numberOfPlayers: setPlayers(players[0]), // default is 1 player
+};
+
+var deck = {
+  numberOfDecks: setNumberOfDecks(),
+  cards: [],
+};
 // set how many players will be on table
 function setPlayers() {
+  // TODO finish the method
+}
+
+function setNumberOfDecks(decksNumber = 1) {
   // TODO finish the method
 }
 
@@ -49,11 +57,3 @@ function shuffleDeck(deck) {
 }
 
 // Generate deck with all card and shuffle it
-var deck = shuffleDeck(
-  generateDeck(
-    gameSettings.suits,
-    gameSettings.ranks,
-    gameSettings.numberOfDecks
-  )
-);
-console.log("🚀 ~ file: script.js:42 ~ deck:", deck);
